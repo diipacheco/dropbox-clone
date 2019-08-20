@@ -30,7 +30,6 @@ const Main : React.SFC<Props> = ({ history }) => {
      setBox({
        title: e.currentTarget.value,
      });
-     console.log(box);
    }
 
   return (
