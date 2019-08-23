@@ -36,7 +36,7 @@ export const Form = styled.form`
         cursor: pointer;
         &:hover {
             opacity: 0.8;
-        }
+        } 
     } 
 
 

@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import logo from '../../Assets/logo.svg';
 import * as S from './styles';
@@ -33,6 +31,7 @@ const Main : React.SFC<Props> = ({ history }) => {
    }
 
   return (
+
     <S.Container>
       <S.Form onSubmit={handleSignin}>
         <img src={logo} alt="Logo da Aplicação: RocketBox" />
@@ -40,6 +39,7 @@ const Main : React.SFC<Props> = ({ history }) => {
         <button type="submit">Criar</button>
       </S.Form>
     </S.Container>
+
 );
 };
 

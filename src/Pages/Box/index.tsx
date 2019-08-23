@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React, { useState, useEffect, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { MdInsertDriveFile } from 'react-icons/md';
@@ -40,7 +36,7 @@ const Box : React.SFC<RouteComponentProps<BoxRouterProps>> = (props) => {
       data.append('file', file);
       api.post(`boxes/${box}/files`, data);
     });
-  }, []);
+  }, [props.match.params.id]);
 
   const subscribeToNewFiles = () => {
     const box = props.match.params.id;
@@ -72,7 +68,7 @@ const Box : React.SFC<RouteComponentProps<BoxRouterProps>> = (props) => {
       });
     };
    handleBox();
-  }, []);
+  }, [props.match.params.id, state.box]);
   const { getInputProps, getRootProps, isDragActive } = useDropzone({ onDrop });
   return (
     <>

@@ -6,6 +6,7 @@ const App: React.FC = () => (
   <>
     <Global />
     <Routes />
+
   </>
 );
 
